@@ -6,7 +6,7 @@ import React from "react";
 import styled from "styled-components";
 import deck_main from "./Components/Deck";
 
-import seta_play from "./assets/img/seta_play.png";
+import seta_play from "./img/seta_play.png";
 
 export default function App() {
   const arrayChange = deck_main.map((q) => "closed");
