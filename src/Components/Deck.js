@@ -1,4 +1,4 @@
-const deck = [
+const deck_main = [
     {Q:"O que é JSX?", R:"Uma extensão de linguagem do JavaScript"},
     {Q:"O React é __", R: "uma biblioteca JavaScript para construção de interfaces"},
     {Q:"Componentes devem iniciar com __", R:"letra maiúscula"},
@@ -8,4 +8,4 @@ const deck = [
     {Q:"Usamos props para __", R: "passar diferentes informações para componentes"},
     {Q:"Usamos estado (state) para __", R:"dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"}]
     
-    export default deck
+    export default deck_main

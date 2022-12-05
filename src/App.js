@@ -1,27 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
-import { findAllByDisplayValue } from '@testing-library/react';
-import { scryRenderedDOMComponentsWithClass } from 'react-dom/test-utils';
+import Header from "./Components/Header";
+import Container from "./Components/Container";
+import Footer from "./Components/Footer";
 
-function App() {
+import React from "react";
+import styled from "styled-components";
+import deck_main from "./Components/Deck";
+
+import seta_play from "../assets/img/seta_play.png";
+
+export default function App() {
+  const arrayChange = deck_main.map((q) => "closed");
+  const [questionChange, setQuestionChange] = React.useState(arrayChange);
+  const [counter, setCounter] = React.useState(0)
+
+  const arrayIconeChange = deck_main.map((i) => seta_play);
+  const [iconeChange, setIconeChange] = React.useState(arrayIconeChange);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ScreenContainer>
+      <Header />
+      <Container
+        questionChange={questionChange}
+        setQuestionChange={setQuestionChange}
+        deck={deck_main}
+        iconeChange={iconeChange}
+        setIconeChange={setIconeChange}
+        setCounter={setCounter}
+        counter={counter}
+      />
+      <Footer
+        iconeChange={iconeChange}
+        counter={counter}
+      />
+    </ScreenContainer>
   );
 }
 
-export default App;
+const ScreenContainer = styled.div`
+  background-color: #fb6b6b;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 200px;
+`;
