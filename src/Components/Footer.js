@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import seta_play from "../assets/img/seta_play.png";
+import seta_play from "./assets/img/seta_play.png";
 
 export default function Footer(props) {
   const {iconeChange, counter} = props

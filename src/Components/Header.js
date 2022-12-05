@@ -1,4 +1,4 @@
-import logo from "../assets/img/logo.png";
+import logo from "./assets/img/logo.png";
 import styled from "styled-components";
 
 export default function Header() {
