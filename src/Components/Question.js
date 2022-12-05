@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import React from "react";
-import seta_play from "./img/seta_play.png";
-import seta_virar from "./img/seta_virar.png";
-import icone_certo from "./img/icone_certo.png";
-import icone_erro from "./img/icone_erro.png";
-import icone_quase from "./img/icone_quase.png";
+import seta_play from "../img/seta_play.png";
+import seta_virar from "../img/seta_virar.png";
+import icone_certo from "../img/icone_certo.png";
+import icone_erro from "../img/icone_erro.png";
+import icone_quase from "../img/icone_quase.png";
 
 export default function Question(props) {
   const {
