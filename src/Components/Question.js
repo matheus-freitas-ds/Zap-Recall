@@ -54,10 +54,10 @@ export default function Question(props) {
 
   if (questionChange[index] === "closed") {
     return (
-      <ContainerQuestion>
-        <Pergunta data-identifier='flashcard-index-item'>Pergunta {index + 1}</Pergunta>
-        <div data-identifier='flashcard-shown-btn'>
-        <img data-identifier='flashcard-status'
+      <ContainerQuestion data-test="flashcard">
+        <Pergunta data-test="flashcard-text">Pergunta {index + 1}</Pergunta>
+        <div>
+        <img data-test="play-btn"
           onClick={() => OpenQuestion(index)}
           src={iconeChange[index]}
           alt="play"
@@ -69,8 +69,8 @@ export default function Question(props) {
   } else if (questionChange[index] === "opened_Q") {
     return (
       <ContainerQuestionOpened>
-        <p data-identifier='flashcard-question'>{deck[index].Q}</p>
-        <img data-identifier='flashcard-turn-btn'
+        <p data-test="flashcard-text">{deck[index].Q}</p>
+        <img data-test='turn-btn'
           onClick={() => TurnFlashcard(index)}
           src={iconeChange[index]}
           alt="flashcard question"
@@ -80,24 +80,24 @@ export default function Question(props) {
   } else if (questionChange[index] === "opened_R") {
     return (
       <ContainerQuestionOpened>
-        <p data-identifier='flashcard-answer'>{deck[index].R}</p>
+        <p data-test="flashcard-text">{deck[index].R}</p>
         <ContainerButtons>
-        <div data-identifier='forgot-btn'>
-          <Button
+        <div data-test="no-btn">
+          <Button data-test="no-icon"
             onClick={() => VerifyButton(index, icone_erro, 'color: #FF3030')} 
             cor="#FF3030">
             Não lembrei
           </Button>
         </div>
-        <div data-identifier='almost-forgot-btn'>
-          <Button
+        <div data-test="partial-btn">
+          <Button data-test="partial-icon"
             onClick={() => VerifyButton(index, icone_quase, 'color: #FF922E')}
             cor="#FF922E">
             Quase Lembrei
           </Button>
         </div>
-        <div data-identifier='zap-btn'>
-          <Button 
+        <div data-test="zap-btn">
+          <Button data-test="zap-icon"
             onClick={() => VerifyButton(index, icone_certo, 'color: #2FBE34')}
             cor="#2FBE34">
             Zap!

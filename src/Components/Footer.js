@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import seta_play from "../img/seta_play.png";
 
 export default function Footer(props) {
   const {iconeChange, counter} = props
   
   return (
     <ContainerFooter>
-      <p data-identifier='flashcard-counter'>{counter}/{iconeChange.length} CONCLUÍDOS</p>
+      <p data-test="footer">{counter}/{iconeChange.length} CONCLUÍDOS</p>
     </ContainerFooter>
   );
 }

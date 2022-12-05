@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-import { findRenderedDOMComponentWithTag } from "react-dom/test-utils";
 import Question from "./Question";
 
 export default function Container(props) {
@@ -8,7 +6,6 @@ export default function Container(props) {
   deck.map((p, index) =>
     layout.push(
       <Question 
-      data-identifier = 'flashcard'
       key={index + 1} 
       questionChange={questionChange}
       setQuestionChange={setQuestionChange}

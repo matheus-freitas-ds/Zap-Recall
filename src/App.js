@@ -1,11 +1,9 @@
 import Header from "./Components/Header";
 import Container from "./Components/Container";
 import Footer from "./Components/Footer";
-
 import React from "react";
 import styled from "styled-components";
 import deck_main from "./Components/Deck";
-
 import seta_play from "./img/seta_play.png";
 
 export default function App() {
